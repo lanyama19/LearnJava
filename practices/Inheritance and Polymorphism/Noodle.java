@@ -44,6 +44,20 @@ public class Noodle {
         System.out.println(yasaiRamen.ingredients);
         System.out.println(yasaiRamen.isTasty()); // return true
 
+        // method overriding
+        Spaetzle kaesespaetzle = new Spaetzle();
+        kaesespaetzle.cook();
+
+        // Child Classes in Arrays and ArrayLists
+        Noodle spaghetti, ramen, pho;
+        spaghetti = new Spaghetti();
+        ramen = new Ramen();
+        pho = new Pho();
+        Noodle[] allTheNoodles = {spaghetti, ramen, pho}; // put objects of child classes into an array
+        for (Noodle noodle: allTheNoodles){
+            System.out.println(noodle.getCookPrep());
+        }
+
     }
 
 }
